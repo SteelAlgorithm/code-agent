@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px;
+        }
+        .login-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+            width: 100%; 
+            max-width: 400px; 
+        }
+        h1 { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            color: #333; 
+        }
+        .input-group { 
+            margin-bottom: 20px; 
+        }
+        input { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            font-size: 16px; 
+        }
+        button { 
+            width: 100%; 
+            padding: 12px; 
+            background: #667eea; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+        }
+        button:hover { 
+            background: #5a67d8; 
+        }
+        .links { 
+            text-align: center; 
+            margin-top: 20px; 
+            font-size: 14px; 
+        }
+        a { 
+            color: #667eea; 
+            text-decoration: none; 
+        }
+        @media (max-width: 480px) {
+            .login-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>用户登录</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="用户名/邮箱" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="密码" required>
+            </div>
+            <button type="submit">登录</button>
+        </form>
+        <div class="links">
+            <a href="#">忘记密码？</a> | <a href="#">注册账号</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if(username && password) {
+                alert('登录成功！欢迎 ' + username);
+                // 在实际应用中，这里会发送登录请求到服务器
+            } else {
+                alert('请填写完整的登录信息');
+            }
+        });
+    </script>
+</body>
+</html>

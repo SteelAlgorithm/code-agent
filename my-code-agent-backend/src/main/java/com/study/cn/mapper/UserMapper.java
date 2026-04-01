@@ -1,0 +1,16 @@
+package com.study.cn.mapper;
+
+import com.mybatisflex.core.BaseMapper;
+import com.study.cn.model.entity.User;
+
+
+/**
+ * 用户表 映射层。
+ * @Author: tom
+ * @CreateTime: 2026-03-19
+ * @Description:
+ * @Version: 1.0
+ */
+public interface UserMapper extends BaseMapper<User> {
+
+}
