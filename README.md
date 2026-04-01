@@ -1,0 +1,6 @@
+项目简介：
+本项目基于Spring Boot 3 + LangChain4j + LangGraph4j 的 AI 零代码应用生成平台。用户输入自然语言描述，由 AI Agent 自动执行并发表素材搜集、代码生成、质量检查、项目构建的完整工作流，最终一键部署为可访问的 Web 应用。
+项目核心为一套 AI 工作流，并采用多级缓存、分布式限流、异步处理、护航重试等多种优化策略，保证系统的高性能与稳定性。
+
+系统设计图：
+<img width="1285" height="1245" alt="QQ截图20260401171604" src="https://github.com/user-attachments/assets/4f81d13e-6976-435d-878c-8c0d0712b6ba" />
